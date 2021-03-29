@@ -12,6 +12,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { ActivatedRoute } from '@angular/router';
+import { HeroService } from './hero.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [ActivatedRoute, HeroService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
